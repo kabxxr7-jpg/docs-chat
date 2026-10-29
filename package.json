@@ -1,0 +1,21 @@
+{
+  "name": "docs-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Answers questions from a folder of documents with citations, and refuses when the documents do not support an answer. Local proof project.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "cli": "tsx src/cli.ts",
+    "ingest": "tsx src/cli.ts ingest",
+    "eval": "tsx src/cli.ts eval",
+    "serve": "tsx src/cli.ts serve"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>docs-chat demo</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; }
+    code { background: #eef3f5; padding: 1px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Harbor &amp; Pine Supply Co.</h1>
+  <p><strong>This is a fictional company.</strong> The widget in the corner answers only from the three sample
+  files in <code>examples/kb</code>, shows the quote it relied on, and says so when the files do not answer.</p>
+  <p>Try: &ldquo;How long do refunds take?&rdquo; or &ldquo;What is the weather in Boston?&rdquo;</p>
+  <script src="/widget.js"></script>
+  <script>
+    DocsChat.init({ endpoint: "/ask", title: "Ask Harbor & Pine (demo)" });
+    if (location.hash === "#demo") DocsChat.ask("How long do refunds take?");
+  </script>
+</body>
+</html>
